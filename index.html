@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#AB1E25" />
+  <meta name="description" content="Demo website Loteng Malang — Pizza & Burger Dealer, brunch by day and dance floor by night." />
+  <title>LOTENG Malang — Pizza & Burger Dealer</title>
+  <link rel="icon" href="assets/logo.jpeg" type="image/jpeg" />
+  <link rel="preload" href="assets/day-1.webp" as="image" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-mode="day">
+  <div class="loader" id="loader" aria-live="polite">
+    <div class="loader__checker"></div>
+    <div class="loader__content">
+      <div class="loader__brand">LOTENG</div>
+      <p>PIZZA &amp; BURGER DEALER</p>
+      <div class="loader__bar"><span id="loaderBar"></span></div>
+      <div class="loader__count" id="loaderCount">00</div>
+    </div>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="LOTENG Malang">
+      <img src="assets/logo-transparent.png" alt="LOTENG Pizza and Burger Dealer" />
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navigasi utama">
+      <a href="#menu">Menu</a>
+      <a href="#event">Event</a>
+      <a href="#gallery">Life at Loteng</a>
+      <a href="#visit">Visit</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="mode-switch" id="modeSwitch" type="button" aria-label="Ganti mode siang dan malam" aria-pressed="false">
+        <span class="mode-switch__track">
+          <span class="mode-switch__sun">☀</span>
+          <span class="mode-switch__moon">☾</span>
+          <span class="mode-switch__knob"></span>
+        </span>
+        <span class="mode-switch__label" id="modeLabel">DAY</span>
+      </button>
+      <a class="button button--small button--solid" href="#reserve">Reserve</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#menu">Menu</a>
+    <a href="#event">Event</a>
+    <a href="#reserve">Reservation</a>
+    <a href="#gallery">Life at Loteng</a>
+    <a href="#visit">Visit</a>
+  </div>
+
+  <main>
+    <section class="hero section-pad">
+      <div class="hero__media" aria-hidden="true">
+        <div class="hero__image hero__image--day"></div>
+        <div class="hero__image hero__image--night"></div>
+        <div class="hero__shade"></div>
+      </div>
+
+      <div class="hero__content">
+        <div class="eyebrow"><span></span> Jl. Bandung No. 5 · Malang</div>
+        <h1>
+          <span class="hero__loteng">LOTENG</span>
+          <span class="hero__tagline" id="heroTagline">BRUNCH BY DAY.</span>
+        </h1>
+        <p class="hero__copy" id="heroCopy">Pizza, burger, comfort food, and a bright corner to spend the afternoon. Then the room changes.</p>
+        <div class="hero__actions">
+          <a class="button button--solid" href="#menu">View Menu</a>
+          <a class="button button--outline" href="#reserve">Reserve a Spot</a>
+        </div>
+      </div>
+
+      <div class="hero__status-card">
+        <span class="status-dot"></span>
+        <div>
+          <small id="statusKicker">BRUNCH &amp; DINNER</small>
+          <strong id="statusTime">12 PM — 10 PM</strong>
+        </div>
+      </div>
+
+      <div class="hero__poster-stamp" aria-hidden="true">PIZZA<br>DEALER</div>
+      <a class="hero__scroll" href="#duality" aria-label="Scroll ke bawah">SCROLL ↓</a>
+    </section>
+
+    <section class="duality section-pad" id="duality">
+      <div class="section-label">01 / TWO SIDES</div>
+      <div class="duality__heading">
+        <p>Same place.<br>Different pulse.</p>
+        <h2>12 PM <span>→</span> TILL LATE</h2>
+      </div>
+
+      <div class="duality__grid">
+        <article class="duality-card duality-card--day" data-set-mode="day" tabindex="0" role="button" aria-label="Aktifkan mode siang">
+          <img src="assets/day-2.webp" alt="Suasana makan siang di Loteng" />
+          <div class="duality-card__overlay"></div>
+          <div class="duality-card__content">
+            <span>12:00 — 22:00</span>
+            <h3>BRUNCH<br>&amp; DINNER</h3>
+            <p>Pizza. Burger. Big plates. Slow afternoons.</p>
+            <span class="text-link">SWITCH TO DAY ↗</span>
+          </div>
+        </article>
+
+        <article class="duality-card duality-card--night" data-set-mode="night" tabindex="0" role="button" aria-label="Aktifkan mode malam">
+          <img src="assets/night-1.webp" alt="Dance floor Loteng pada malam hari" />
+          <div class="duality-card__overlay"></div>
+          <div class="duality-card__content">
+            <span>22:00 — TILL LATE · 21+</span>
+            <h3>DANCE<br>FLOOR</h3>
+            <p>Lights down. Volume up. Night mode takes over.</p>
+            <span class="text-link">SWITCH TO NIGHT ↗</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="picks section-pad">
+      <div class="section-label">02 / DEALER'S PICKS</div>
+      <div class="section-head">
+        <h2>GOOD FOOD.<br>NO SMALL ENERGY.</h2>
+        <p>Some of the dishes that fit the LOTENG mood best. The full list lives right below, because apparently humans do enjoy scrolling through food when hungry.</p>
+      </div>
+
+      <div class="picks__grid">
+        <article class="pick-card pick-card--wide">
+          <img src="assets/food-1.webp" alt="Truffle Magic Mushroom pizza" />
+          <div class="pick-card__meta"><span>01</span><strong>TRUFFLE MAGIC MUSHROOM</strong><em>45 / 140K</em></div>
+        </article>
+        <article class="pick-card">
+          <img src="assets/food-2.webp" alt="Pepperoni pizza" />
+          <div class="pick-card__meta"><span>02</span><strong>PEPPERONI</strong><em>43 / 135K</em></div>
+        </article>
+        <article class="pick-card">
+          <img src="assets/food-3.webp" alt="Loaded beef and cheese fries" />
+          <div class="pick-card__meta"><span>03</span><strong>LOADED BEEF &amp; CHEESE FRIES</strong><em>70K</em></div>
+        </article>
+        <article class="pick-card pick-card--drink">
+          <img src="assets/drink-1.webp" alt="Minuman di Loteng" />
+          <div class="pick-card__meta"><span>04</span><strong>DRINKS</strong><em>FROM 20K</em></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="menu-section section-pad" id="menu">
+      <div class="menu-section__intro">
+        <div class="section-label">03 / MENU</div>
+        <h2>THE<br>DEALER'S<br>LIST.</h2>
+        <p>Brunch &amp; dinner menu in one compact board. Filter a category or search an item without turning the entire page into a restaurant receipt.</p>
+        <div class="menu-note">P = Personal · G = Group (3–4 person)</div>
+      </div>
+
+      <div class="menu-board">
+        <div class="menu-board__top">
+          <div>
+            <span>LOTENG</span>
+            <small>BRUNCH &amp; DINNER</small>
+          </div>
+          <label class="menu-search">
+            <span>⌕</span>
+            <input id="menuSearch" type="search" placeholder="Search menu..." autocomplete="off" />
+          </label>
+        </div>
+        <div class="menu-tabs" id="menuTabs" aria-label="Filter kategori menu"></div>
+        <div class="menu-list" id="menuList" tabindex="0"></div>
+        <div class="menu-board__bottom">
+          <span>Prices shown in IDR 'K'</span>
+          <span id="menuCount">0 ITEMS</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="night-shift" id="nightshift">
+      <video class="night-shift__video" autoplay muted loop playsinline poster="assets/live-music.webp">
+        <source src="assets/live-music.mp4" type="video/mp4" />
+      </video>
+      <div class="night-shift__overlay"></div>
+      <div class="night-shift__content section-pad">
+        <div class="section-label section-label--light">04 / NIGHT SHIFT · 21+</div>
+        <p class="night-shift__small">10 PM — TILL LATE</p>
+        <h2>WHEN DINNER ENDS,<br>LOTENG DOESN'T.</h2>
+        <button class="button button--light" type="button" data-set-mode="night">Enter Night Mode</button>
+      </div>
+    </section>
+
+    <section class="event-section section-pad" id="event">
+      <div class="section-label">05 / UP NEXT</div>
+      <div class="event-layout">
+        <button class="event-poster" id="eventPosterButton" type="button" aria-label="Buka detail event">
+          <img src="assets/event.jpg" alt="Poster 7 Anniversary Out of Bounds" />
+          <span>VIEW EVENT ↗</span>
+        </button>
+        <div class="event-info">
+          <span class="event-info__badge">21+ · ANNIVERSARY</span>
+          <h2><span>7</span><span>ANNIVERSARY</span></h2>
+          <p class="event-info__subtitle">OUT OF BOUNDS</p>
+          <div class="event-info__date">
+            <strong>25</strong>
+            <span>SEPT<br>FRIDAY</span>
+          </div>
+          <div class="event-info__lineup">
+            <span>LINE UP</span>
+            <p>DIPHA BARUS · CIKO · KC JONES · ASTEP GANG</p>
+          </div>
+          <div class="event-info__actions">
+            <button class="button button--solid" type="button" id="openEvent">Event Details</button>
+            <a class="button button--outline" id="eventRsvp" href="#">RSVP via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reserve-section section-pad" id="reserve">
+      <div class="reserve-copy">
+        <div class="section-label">06 / RESERVATION</div>
+        <h2>PICK A<br>SPOT.</h2>
+        <p>This is a <strong>demo reservation system</strong>. Table availability below is simulated to demonstrate how LOTENG could handle reservations in one place.</p>
+        <div class="reserve-warning">
+          <strong>DEMO MODE</strong>
+          <span>Availability is not connected to LOTENG's real reservation data.</span>
+        </div>
+      </div>
+
+      <div class="reservation-app" id="reservationApp">
+        <div class="reservation-app__steps">
+          <span class="active">01 DETAILS</span><span>02 TABLE</span><span>03 CONTACT</span>
+        </div>
+
+        <div class="reservation-grid">
+          <div class="reservation-form">
+            <div class="field-group field-group--split">
+              <label>Experience
+                <select id="resExperience">
+                  <option value="day">Brunch & Dinner</option>
+                  <option value="night">Dance Floor / Night · 21+</option>
+                </select>
+              </label>
+              <label>Guests
+                <select id="resGuests">
+                  <option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                </select>
+              </label>
+            </div>
+            <div class="field-group field-group--split">
+              <label>Date
+                <input id="resDate" type="date" />
+              </label>
+              <label>Time
+                <select id="resTime"></select>
+              </label>
+            </div>
+            <div class="age-check" id="ageCheck" hidden>
+              <label><input type="checkbox" id="ageConfirm" /> I understand the night area is 21+.</label>
+            </div>
+            <button class="button button--solid button--full" id="checkAvailability" type="button">Check Demo Availability</button>
+            <p class="availability-message" id="availabilityMessage">Choose your details first, then check the demo floor.</p>
+          </div>
+
+          <div class="floor-wrap">
+            <div class="floor-head">
+              <span>DEMO FLOOR MAP</span>
+              <div class="floor-legend"><i class="legend-free"></i>Free <i class="legend-selected"></i>Selected <i class="legend-busy"></i>Busy</div>
+            </div>
+            <div class="floor-map" id="floorMap">
+              <div class="floor-zone floor-zone--window">WINDOW SIDE</div>
+              <div class="floor-zone floor-zone--bar">BAR</div>
+              <div class="floor-zone floor-zone--stage">DJ / STAGE</div>
+              <button class="table-seat" data-table="W1" data-capacity="2" style="--x:14%;--y:26%">W1<small>2</small></button>
+              <button class="table-seat" data-table="W2" data-capacity="4" style="--x:31%;--y:26%">W2<small>4</small></button>
+              <button class="table-seat" data-table="C1" data-capacity="4" style="--x:49%;--y:45%">C1<small>4</small></button>
+              <button class="table-seat" data-table="C2" data-capacity="6" style="--x:68%;--y:45%">C2<small>6</small></button>
+              <button class="table-seat" data-table="L1" data-capacity="6" style="--x:23%;--y:69%">L1<small>6</small></button>
+              <button class="table-seat" data-table="L2" data-capacity="8" style="--x:46%;--y:72%">L2<small>8</small></button>
+              <button class="table-seat" data-table="L3" data-capacity="12" style="--x:72%;--y:72%">L3<small>12</small></button>
+            </div>
+            <p class="selected-table" id="selectedTable">No table selected.</p>
+          </div>
+        </div>
+
+        <div class="contact-form" id="contactForm">
+          <div class="field-group field-group--split">
+            <label>Name
+              <input id="resName" type="text" placeholder="Your name" />
+            </label>
+            <label>Phone
+              <input id="resPhone" type="tel" placeholder="08xx..." />
+            </label>
+          </div>
+          <label>Notes <span>(optional)</span>
+            <textarea id="resNotes" rows="3" placeholder="Birthday, seating request, etc."></textarea>
+          </label>
+          <button class="button button--solid button--full" id="sendReservation" type="button" disabled>Continue to WhatsApp</button>
+          <small>Submitting opens WhatsApp with your demo reservation details. Final confirmation still happens with LOTENG.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section section-pad" id="gallery">
+      <div class="section-label">07 / LIFE AT LOTENG</div>
+      <div class="section-head section-head--gallery">
+        <h2>EAT.<br>STAY.<br>GET LOUD.</h2>
+        <a href="http://www.instagram.com/lotengmalang" target="_blank" rel="noreferrer" class="text-link">@LOTENGMALANG ↗</a>
+      </div>
+
+      <div class="gallery-grid">
+        <button class="gallery-item gallery-item--tall" data-lightbox="assets/bar-1.webp"><img src="assets/bar-1.webp" alt="Bartender menyiapkan minuman" /></button>
+        <button class="gallery-item gallery-item--wide" data-lightbox="assets/food-people.webp"><img src="assets/food-people.webp" alt="Suasana makan bersama di Loteng" /></button>
+        <button class="gallery-item" data-lightbox="assets/night-2.webp"><img src="assets/night-2.webp" alt="Crowd malam Loteng" /></button>
+        <button class="gallery-item" data-lightbox="assets/bar-2.webp"><img src="assets/bar-2.webp" alt="Bar LOTENG" /></button>
+        <button class="gallery-item gallery-item--tall" data-lightbox="assets/live-music.webp"><img src="assets/live-music.webp" alt="DJ bermain di Loteng" /></button>
+        <button class="gallery-item gallery-item--wide" data-lightbox="assets/day-1.webp"><img src="assets/day-1.webp" alt="Suasana siang Loteng" /></button>
+      </div>
+    </section>
+
+    <section class="visit-section section-pad" id="visit">
+      <div class="visit-section__checker" aria-hidden="true"></div>
+      <div class="visit-grid">
+        <div class="visit-title">
+          <div class="section-label">08 / FIND LOTENG</div>
+          <h2>COME<br>UPSTAIRS.</h2>
+        </div>
+        <div class="visit-details">
+          <div class="visit-row"><span>ADDRESS</span><p>Jl. Bandung No. 5<br>Malang, Indonesia</p></div>
+          <div class="visit-row"><span>DAY</span><p>Brunch &amp; Dinner<br>12 PM — 10 PM</p></div>
+          <div class="visit-row"><span>NIGHT</span><p>Dance Floor · 21+<br>10 PM — Till Late</p></div>
+          <div class="visit-links">
+            <a class="button button--solid" href="https://maps.app.goo.gl/oYrhfZkx1rmz62Q88" target="_blank" rel="noreferrer">Open Maps ↗</a>
+            <a class="button button--outline" href="http://www.instagram.com/lotengmalang" target="_blank" rel="noreferrer">Instagram ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="visit-marquee" aria-hidden="true"><span>LOTENG · PIZZA DEALER · BRUNCH · DINNER · DANCE FLOOR · MALANG · </span><span>LOTENG · PIZZA DEALER · BRUNCH · DINNER · DANCE FLOOR · MALANG · </span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-pad">
+    <div class="footer-brand">LOTENG</div>
+    <p>Demo website concept. Reservation availability is simulated.</p>
+    <div class="footer-links">
+      <a href="https://wa.me/6282244714706" target="_blank" rel="noreferrer">WhatsApp 1</a>
+      <a href="https://wa.me/6285804404438" target="_blank" rel="noreferrer">WhatsApp 2</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <a class="mobile-reserve" href="#reserve">RESERVE A SPOT</a>
+
+  <div class="modal event-modal" id="eventModal" role="dialog" aria-modal="true" aria-labelledby="eventModalTitle" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="event-modal__panel">
+      <button class="modal__close" type="button" data-close-modal aria-label="Tutup popup">×</button>
+      <div class="event-modal__poster"><img src="assets/event.jpg" alt="7 Anniversary Out of Bounds" /></div>
+      <div class="event-modal__copy">
+        <span class="event-info__badge">21+ · SPECIAL EVENT</span>
+        <p class="modal-kicker">UP NEXT AT LOTENG</p>
+        <h2 id="eventModalTitle"><span>7 ANNIVERSARY</span><span class="event-modal__subtitle">OUT OF BOUNDS</span></h2>
+        <p class="modal-lineup">Dipha Barus · Ciko · KC Jones · Astep Gang</p>
+        <div class="modal-date">FRIDAY · 25 SEPTEMBER</div>
+        <p class="modal-note">Event information follows the supplied poster. RSVP will continue through WhatsApp.</p>
+        <div class="modal-actions">
+          <a class="button button--solid" id="modalRsvp" href="#">RSVP NOW</a>
+          <button class="button button--outline" type="button" data-close-modal>Maybe later</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery preview" hidden>
+    <div class="modal__backdrop" data-close-lightbox></div>
+    <div class="lightbox__panel">
+      <button class="modal__close" type="button" data-close-lightbox aria-label="Tutup gambar">×</button>
+      <img id="lightboxImage" src="" alt="Preview gallery Loteng" />
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
