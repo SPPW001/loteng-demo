@@ -369,7 +369,30 @@ $('#sendReservation').addEventListener('click', () => {
     count.textContent = '100';
     setTimeout(() => {
       loader.classList.add('is-done');
-      setTimeout(openEventModal, 650);
+      if (!new URLSearchParams(location.search).has('nopopup')) setTimeout(openEventModal, 650);
     }, 380);
   });
+})();
+
+// Mobile CTA: keep it out of the hero and reservation itself so it helps instead of covering content.
+(function setupMobileReserveCTA() {
+  const cta = document.querySelector('.mobile-reserve');
+  const hero = document.querySelector('.hero');
+  const reserve = document.querySelector('#reserve');
+  if (!cta || !hero || !reserve) return;
+
+  const update = () => {
+    if (window.innerWidth > 820) {
+      cta.classList.remove('is-visible');
+      return;
+    }
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    const reserveRect = reserve.getBoundingClientRect();
+    const insideReserve = reserveRect.top < window.innerHeight * .78 && reserveRect.bottom > 90;
+    cta.classList.toggle('is-visible', heroBottom < 100 && !insideReserve);
+  };
+
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
 })();
